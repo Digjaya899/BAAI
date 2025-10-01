@@ -1,11 +1,11 @@
 #
-# James, 2025/09/24
+# James, 2025/10/01
 # File: James_Minus.py
 # Short description of the task
 #
 
 # 1. Input
-X = 5
+x=5 
 
 # 2. Process
 
