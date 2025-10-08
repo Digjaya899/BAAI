@@ -5,11 +5,16 @@
 #
 
 # 1. Input
-X = 8
-Y = 7
+X = input('First number:')
+Y = input('Second number:')
 
 # 2. Process
+X1 = int(X)
+Y1 = int(Y)
+
 sum = X + Y
+sum1 = X1 + Y1
 
 # 3. Output 
 print(f'Result {sum}')
+print(f'Result {sum1}')
