@@ -5,11 +5,19 @@
 #
 
 # 1. Input
-temperature = 30
+order_values = [120, 450, 80, 300, 650]
+total_revenue = 0
+total_items = 0
+
+for order in order_values:
+    total_revenue += order
+    total_items += 1
+    print (f"Processing Order: ${order}")
+
+print (f"\nTotal Revenue: ${total_revenue}")
+print (f"n\Total Items: {total_items}")
 
 # 2. Process
-if temperature > 25:
-    print("It's too hot outside. Study hard in the library!")
+
 
 # 3. Output
-print (temperature)
