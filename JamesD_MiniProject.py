@@ -22,51 +22,43 @@ total_product = 0
 
 print ("=== PRODUCT DISCOUNT CALCULATOR ===\n")
 
-# Process Each Product
+# Process Each Product in Loop
 for product in products:
 	name =  product["name"]
 	price = product["price"]
 	category = product["category"]
 	total_product += 1
-	
-# Discount Rate
-if category == "Electronics":
-	if price >= 1000:
-		discount = 0.2
-	elif price >= 500:
-		discount = 0.15
-	else:
+	if category == "Electronics":
+		if price >= 1000:
+			discount = 0.2
+		elif price >= 500:
+			discount = 0.15
+		else:
+			discount = 0.1
+	elif category == "Clothing":
+		if price >= 100:
+			discount = 0.25
+		else: 
+			discount = 0.15
+	elif category == "Books":
 		discount = 0.1
-elif category == "Clothing":
-	if price >= 100:
-		discount = 0.25
-	else: 
-		discount = 0.15
-elif category == "Books":
-	discount = 0.1
-else:
-	discount = 0
+	else:
+		discount = 0
+	discount_percent = discount * 100
+	discount_price = price * discount
+	final_price = price - discount_price
+	total_original += price
+	total_discount += discount_price
+	total_final += final_price
+	print(f"\nProduct: {name}")
+	print(f"\nCategory: {category}")
+	print (f"\nOriginal Price: ${price}")
+	print (f"\nDiscount: {discount_percent}%")
+	print (f"\nFinal Price: ${final_price}")
 
-# Discount Calculation
-discount_percent = discount * 100
-discount_price = price * discount
-final_price = price - discount_price
-
-# New Product Variables
-total_original += price
-total_discount += discount_price
-total_final += final_price
 
 # 3. Output
 
-# Product Details
-print(f"\nProduct: {name}")
-print(f"\nCategory: {category}")
-print (f"\nOriginal Price: ${price}")
-print (f"\nDiscount: {discount_percent}%")
-print (f"\nFinal Price: ${final_price}")
-
-# Summary Report
 print("=== SUMMARY ===")
 print(f"\nTotal Products: {total_product}")
 print(f"\nTotal Original Price: ${total_original}")
