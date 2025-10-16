@@ -55,6 +55,8 @@ for product in products:
 	print (f"\nOriginal Price: ${price}")
 	print (f"\nDiscount: {discount_percent}%")
 	print (f"\nFinal Price: ${final_price}")
+	print()
+	print()
 
 
 # 3. Output
