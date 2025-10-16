@@ -59,6 +59,10 @@ for product in products:
 
 # 3. Output
 
+# Summary
+print()
+print()
+print()
 print("=== SUMMARY ===")
 print(f"\nTotal Products: {total_product}")
 print(f"\nTotal Original Price: ${total_original}")
