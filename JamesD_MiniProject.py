@@ -41,18 +41,10 @@ Total_Final = 0
 
 
 # 3. Output
-print ("===PRODUCT DISCOUNT CALCULATOR===")
+print ("\n===PRODUCT DISCOUNT CALCULATOR===")
 
 for product in products:
 	product = ["name"]
 	Category = ["category"]
 	Original_Price = ["price"]
 	Discount = calculate_discount
-print
-	
-
-	
-	
-
-	 
-	
