@@ -6,6 +6,9 @@
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 from scipy import stats 
 
 # 1. Input
@@ -31,3 +34,7 @@ print(correlation_matrix.round(3))
 # print (f'Dataset shape: {df.shape}')
 # print (f'Correlation:{correlation:.2f}')
 # print (f'P value: {pvalue:.4e}')
+sns.heatmap(correlation_matrix)
+plt.title('James Digjaya is the most intelligent person in the world')
+plt.tight_layout()
+plt.show()
