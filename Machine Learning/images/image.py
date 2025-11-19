@@ -18,6 +18,7 @@ input_folder = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images
 # input_folder = 'bird/yes'
 cat_folder   = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images\\cats'
 dog_folder   = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images\\dogs'
+fruit_folder = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images\\fruits'
 
 #
 # Load pre-trained ResNet50 model + higher level layers
@@ -32,6 +33,11 @@ cat_classes = [
     'cougar', 'lynx', 'leopard', 'snow_leopard', 'jaguar', 'lion', 'cheetah'
 ]
 cat_classes = [element.lower() for element in cat_classes]
+
+fruit_classes = [
+    'pineapple', 'banana', 'lemon', 'orange', 'strawberry'
+]
+fruit_classes = [element.lower() for element in fruit_classes]
 
 dog_classes = [
     'Chihuahua', 'Japanese_spaniel', 'Maltese_dog', 'Pekinese', 'Shih-Tzu', 'Blenheim_spaniel', 
@@ -90,7 +96,10 @@ for filename in os.listdir(input_folder):
         elif classification in dog_classes:
             shutil.move(img_path, os.path.join(dog_folder, filename))
             print(f'{filename} moved to {dog_folder}')
+        elif classification in fruit_classes:
+            shutil.move(img_path, os.path.join(fruit_folder, filename))
+            print(f'{filename} moved to {fruit_folder}')
         else:
-            print(f'{filename} is not a cat or dog.')
+            print(f'{filename} is not a cat or dog or fruit.')
 
 print('Processing complete.')
