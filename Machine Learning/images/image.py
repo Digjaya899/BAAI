@@ -82,6 +82,7 @@ for filename in os.listdir(input_folder):
         classification = classify_image(img_path)
         print(classification)
         classification = classification.lower()
+        print(classification) 
         # Move the image to the appropriate folder
         if classification in cat_classes:
             shutil.move(img_path, os.path.join(cat_folder, filename))
