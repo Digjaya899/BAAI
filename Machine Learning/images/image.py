@@ -14,10 +14,10 @@ import numpy as np
 # Paths to the folders
 #
 #
-input_folder = 'images'
+input_folder = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images'
 # input_folder = 'bird/yes'
-cat_folder   = 'images/cats'
-dog_folder   = 'images/dogs'
+cat_folder   = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images\\cats'
+dog_folder   = 'C:\\Users\\User\\Desktop\\JamesD\\BAAI\\Machine Learning\\images\\dogs'
 
 #
 # Load pre-trained ResNet50 model + higher level layers
