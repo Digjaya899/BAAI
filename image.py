@@ -1,6 +1,6 @@
 #
 # Classify cats and dogs
-# James asdf
+# JamesD
 #
 
 import os
